@@ -82,7 +82,7 @@
       <File filePath="cli_helloworld_ws_soap.4gl"/>
     </Application>
   </Group>
-  <Group id="974813244" label="Server" language="Genero (no link)" targetDirectory="$(ProjectDir)/bin500">
+  <Group environment="value:FGLAPPSERVER=8080,value:DATABASE=njm_demo310" id="974813244" label="Server" language="Genero (no link)" targetDirectory="$(ProjectDir)/bin500">
     <Group id="1109611669" label="Common">
       <Library binaryName="DBping" id="-338621439" label="DBping">
         <File filePath="DBping.4gl"/>
@@ -104,7 +104,7 @@
         <Directory includedFiles="*.xcf" label="Config" recursive="false" sourceDirectory="$(ProjectDir)/etc"/>
       </Package>
     </Group>
-    <Group environment="value:FGLAPPSERVER=8080" id="1964969159" label="ServerRest">
+    <Group id="1964969159" label="ServerRest">
       <Application binaryName="HelloWorldRest" id="823907511" label="HelloWorldRest">
         <Configuration id="1836121319" label="HelloWorldRest"/>
         <File filePath="HelloWorldRest.4gl"/>
@@ -114,7 +114,7 @@
         <File filePath="WSlibRest.4gl"/>
       </Library>
     </Group>
-    <Group environment="value:FGLAPPSERVER=8080" id="289626848" label="ServerSoap">
+    <Group id="289626848" label="ServerSoap">
       <Application binaryName="HelloWorldSoap" dependencies="14000,1986,2030875824,-2092493382,-338621439" id="18736" label="HelloWorldSoap">
         <Configuration id="-1429969501" label="HelloWorldsoap"/>
         <File filePath="HelloWorldSoap.4gl"/>

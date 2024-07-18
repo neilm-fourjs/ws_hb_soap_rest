@@ -1,5 +1,6 @@
 
 export FGLAPPSERVER=8080
+export DATABASE=njm_demo310
 
 all:	cli_helloworld_ws_rest.4gl cli_helloworld_ws_soap.4gl
 	gsmake ws_soap_and_rest_heartbeat.4pw

@@ -10,6 +10,8 @@ IMPORT com
 MAIN
 	DEFINE l_stat INT
 
+	DISPLAY DBping.doDBping()
+
 	CALL log.log("Create Soap WS...")
 	CALL WSlibSoap.createWS_service("HelloWorld", "https://generodemos/g/ws/r/HelloWorld") RETURNING l_stat
 	IF l_stat <> 0 THEN
@@ -29,7 +31,7 @@ FUNCTION addFunctions(l_serv com.WebService)
 	CALL l_serv.publishOperation(l_op, "")
 
 	CALL log.log("Publish DBping ...")
-	LET l_op = com.WebOperation.CreateDOCStyle("DBping.DBping", "DBping", NULL, DBpingResponse)
+	LET l_op = com.WebOperation.CreateDOCStyle("DBping.DBpingS", "DBping", NULL, DBpingResponse)
 	CALL l_serv.publishOperation(l_op, "")
 
 END FUNCTION

@@ -9,6 +9,8 @@ MAIN
 	IF l_url IS NOT NULL THEN
 		LET cli_helloworld_ws_rest.Endpoint.Address.Uri = l_url
 	END IF
-	CALL HelloWorld("Fred") RETURNING l_stat, l_reply
+	CALL cli_helloworld_ws_rest.HelloWorld("Fred") RETURNING l_stat, l_reply
+	DISPLAY SFMT("Status: %1 Reply: %2", l_stat, l_reply)
+	CALL cli_helloworld_ws_rest.DBping() RETURNING l_stat, l_reply
 	DISPLAY SFMT("Status: %1 Reply: %2", l_stat, l_reply)
 END MAIN

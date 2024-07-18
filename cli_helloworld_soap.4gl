@@ -11,4 +11,6 @@ MAIN
 	END IF
 	CALL HelloWorld("Fred") RETURNING l_stat, l_reply
 	DISPLAY SFMT("Status: %1 Reply: %2", l_stat, l_reply)
+	CALL DBping() RETURNING l_stat, l_reply
+	DISPLAY SFMT("Status: %1 Reply: %2", l_stat, l_reply)
 END MAIN

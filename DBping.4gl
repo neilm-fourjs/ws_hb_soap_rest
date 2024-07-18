@@ -3,8 +3,8 @@ IMPORT FGL log
 &include "DBping.inc"
 
 --------------------------------------------------------------------------------
-FUNCTION DBping()
-	LET DBpingResponse.status = doDBping()
+FUNCTION DBpingS()
+	LET DBpingResponse.status = DBping()
 	IF DBpingResponse.status != "OK" THEN
 		CALL setError(-1, "ERROR", "")
 	END IF
